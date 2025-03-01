@@ -8,7 +8,10 @@ import os
 
 # Initialize the Dash app
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-server = app.server  # This line is important - keep it at this level
+
+# This needs to be named 'application' for Render
+application = app.server
+server = application  # Keep this for backwards compatibility
 
 # Load and calculate
 try:
