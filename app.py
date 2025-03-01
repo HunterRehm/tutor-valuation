@@ -119,7 +119,14 @@ app.layout = html.Div([
         html.H2('Revenue Details', style={'textAlign': 'center', 'margin': '20px'}),
         dcc.Graph(
             id='monthly-revenue-graph',
-            figure=revenue_figure
+            figure=revenue_figure,
+            config={
+                'scrollZoom': False,
+                'doubleClick': False,
+                'showTips': False,
+                'displayModeBar': False,
+                'dragMode': False
+            }
         ),
         
         # Additional revenue metrics
