@@ -8,7 +8,7 @@ import os
 
 # Initialize the Dash app
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-server = app.server  # Add this line for production deployment
+server = app.server  # This line is important - keep it at this level
 
 # Load and calculate
 try:
