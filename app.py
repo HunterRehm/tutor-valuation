@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 import dash_bootstrap_components as dbc
 from valuation_analysis import calculate_valuation
+import os
 
 # Initialize the Dash app
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -150,6 +151,9 @@ app.layout = html.Div([
 
 ], style={'padding': '20px', 'backgroundColor': '#f8f9fa'})
 
+# Add port configuration for Render
+port = int(os.getenv('PORT', 8080))
+
 # Run the app
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run(debug=True, host='0.0.0.0', port=port) 
