@@ -125,7 +125,9 @@ app.layout = html.Div([
                 'doubleClick': False,
                 'showTips': False,
                 'displayModeBar': False,
-                'dragMode': False
+                'dragMode': False,
+                'staticPlot': True,
+                'responsive': True
             }
         ),
         
